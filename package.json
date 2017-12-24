@@ -1,0 +1,33 @@
+{
+  "name": "pimatic-livolo",
+  "description": "Plugin for livolo remote switches",
+  "author": {
+    "name": "Thomas Mello"
+  },
+  "main": "livolo.coffee",
+  "files": [
+    "livolo.coffee",
+    "README.md",
+    "livolo-config-schema.coffee",
+    "device-config-schema.coffee"
+  ],
+  "version": "1.0.0",
+  "private": false,
+  "configSchema": "livolo-config-schema.coffee",
+  "dependencies": {
+    "livolo": "^1.0.0"
+  },
+  "peerDependencies": {
+    "pimatic": "0.9.*"
+  },
+  "engines": {
+    "node": ">0.8.x",
+    "npm": ">1.1.x"
+  },
+  "maintainers": [
+    {
+      "name": "codedealer",
+      "email": "work.mello@gmail.com"
+    }
+  ]
+}
