@@ -16,3 +16,13 @@ Key codes (buttons on remote):
 ```
 npm install pimatic-livolo
 ```
+
+## Usage
+
+Assign transmitting pin in plugin config and add a livolo remote device which is similar to standard buttons device.
+
+Livolo plugin also supports
+```
+livolo switch
+```
+action to activate different buttons on a device.
