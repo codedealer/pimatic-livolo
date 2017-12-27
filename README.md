@@ -17,12 +17,20 @@ Key codes (buttons on remote):
 npm install pimatic-livolo
 ```
 
+Important: if you do not run pimatic as root your user must be a member of the `gpio` group, and you may need to configure udev with the following rule (assuming Raspberry Pi 3):
+
+```console
+$ cat >/etc/udev/rules.d/20-gpiomem.rules <<EOF
+SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
+EOF
+```
+
 ## Usage
 
-Assign transmitting pin in plugin config and add a livolo remote device which is similar to standard buttons device.
+1. Assign transmitting pin in plugin config. This plugin uses _physical_ pin numbering so by default _pin 22_ is used which is GPIO25 pin for raspberry pi 3.
 
-Livolo plugin also supports
-```
-livolo switch
-```
-action to activate different buttons on a device.
+2. Add a livolo remote device which is similar to standard buttons device. Assign a device a remote id (see above) and a key code to every button.
+
+3. Make your switches learn a newly created remote device.
+
+Livolo plugin also supports `livolo switch` action to activate different buttons on a device.
