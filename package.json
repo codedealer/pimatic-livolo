@@ -16,11 +16,11 @@
     "livolo-config-schema.coffee",
     "device-config-schema.coffee"
   ],
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
   "configSchema": "livolo-config-schema.coffee",
   "dependencies": {
-    "livolo": "^1.0.0"
+    "livolo": "^1.0.1"
   },
   "peerDependencies": {
     "pimatic": "0.9.*"
